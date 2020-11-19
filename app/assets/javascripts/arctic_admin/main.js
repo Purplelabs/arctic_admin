@@ -40,15 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // toggle of nested menu items
   const nestedMenuItems = document.querySelectorAll('#tabs .has_nested')
-  if (nestedMenuItems) {
-    nestedMenuItems.forEach(
-      (nestedMenuItem) => {
-        nestedMenuItem.addEventListener('click', (e) => {
-          e.stopPropagation()
-          nestedMenuItem.classList.toggle('open')
-        })
-      }
-    )
-  }
+  nestedMenuItems.forEach(
+    (nestedMenuItem) => {
+      nestedMenuItem.addEventListener('click', (e) => {
+        e.stopPropagation()
+        nestedMenuItem.classList.toggle('open')
+      })
+    }
+  )
 
 })
